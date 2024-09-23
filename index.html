@@ -42,7 +42,7 @@
         <!-- Account Balance -->
         <div class="flex items-center gap-2">
           <img src="./assets/coin.png" alt="" />
-          <h2><span>5500 </span>BDT</h2>
+          <h2><span id="account-balance">5500 </span>BDT</h2>
         </div>
       </nav>
 
@@ -77,7 +77,9 @@
             <!-- Donated Amount -->
             <div class="flex items-center gap-2 mt-3">
               <img src="./assets/coin.png" alt="" />
-              <p class="text-gray-500 text-md text-xl"><span>2400</span> BDT</p>
+              <p class="text-gray-500 text-md text-xl">
+                <span id="noakhali-donated-amount">200</span> BDT
+              </p>
             </div>
             <h2 class="font-semibold text-black text-2xl my-3">
               Donate for Flood at Noakhali, Bangladesh
@@ -95,9 +97,11 @@
                 type="number"
                 placeholder="Write Donation Amount"
                 class="py-3 px-2 w-full border-2 border-gray-300 my-2"
+                id="noakhali-donated-input"
               />
             </div>
             <button
+              id="donate-for-noakhali"
               class="font-bold text-xl rounded-md bg-green-300 w-full py-3"
             >
               Donate Now
@@ -187,6 +191,9 @@
           </div>
         </div>
       </section>
+      <!-- History Section -->
+      <section id="history"></section>
     </main>
+    <script src="./js/index.js"></script>
   </body>
 </html>
