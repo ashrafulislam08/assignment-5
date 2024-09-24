@@ -42,7 +42,7 @@
         <!-- Account Balance -->
         <div class="flex items-center gap-2">
           <img src="./assets/coin.png" alt="" />
-          <h2><span id="account-balance">5500 </span>BDT</h2>
+          <h2><span class="mr-1" id="account-balance">5500 </span>BDT</h2>
         </div>
       </nav>
 
@@ -119,30 +119,33 @@
             <!-- Donated Amount -->
             <div class="flex items-center gap-2 mt-3">
               <img src="./assets/coin.png" alt="" />
-              <p class="text-gray-500 text-md text-xl"><span>2400</span> BDT</p>
+              <p class="text-gray-500 text-md text-xl">
+                <span id="feni-donated-amount">2400</span> BDT
+              </p>
             </div>
             <h2 class="font-semibold text-black text-2xl my-3">
-              Aid for Injured in the Quota Movement
+              Donate for Flood Relief in Feni,Bangladesh
             </h2>
             <p class="text-md my-3">
-              The recent Quota movement has resulted in numerous injuries and
-              significant hardship for many individuals. Your support is crucial
-              in providing medical assistance, rehabilitation, and necessary
-              supplies to those affected. By contributing, you help ensure that
-              injured individuals receive the care and support they need during
-              this challenging time. Every donation plays a vital role in
-              alleviating their suffering and aiding in their recovery. Please
-              consider making a donation to support these brave individuals in
-              their time of need.
+              The recent floods in Feni have devastated local communities,
+              leading to severe disruption and loss. Your generous donation will
+              help provide immediate aid, including food, clean water, and
+              medical supplies, to those affected by this calamity. Together, we
+              can offer crucial support and help rebuild lives in the aftermath
+              of this disaster. Every contribution counts towards making a real
+              difference. Please consider donating today to assist those in
+              urgent need.
             </p>
             <div>
               <input
-                type="number"
+                type="text"
+                id="feni-donated-input"
                 placeholder="Write Donation Amount"
                 class="py-3 px-2 w-full border-2 border-gray-300 my-2"
               />
             </div>
             <button
+              id="donate-for-feni"
               class="font-bold text-xl rounded-md bg-green-300 w-full py-3"
             >
               Donate Now
@@ -194,7 +197,8 @@
       <!-- History Section -->
       <section class="hidden" id="history"></section>
     </main>
-    <script src="./js/index.js"></script>
+    <script src="./js/common.js"></script>
     <script src="./js/handleTab.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

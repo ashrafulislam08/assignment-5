@@ -8,41 +8,44 @@ donateForNoakhali.addEventListener("click", function () {
   const noakhaliDonateInput = document.getElementById("noakhali-donated-input");
 
   //   Convert value into number
-  const accountBalanceValue = parseFloat(accountBalance.innerText);
-  const donatedAmountValue = parseFloat(donatedAmount.innerText);
-  const donatedInputValue = parseFloat(noakhaliDonateInput.value);
+  const accountBalanceValue = Number(accountBalance.innerText);
+  const donatedAmountValue = Number(donatedAmount.innerText);
+  const donatedInputValue = Number(noakhaliDonateInput.value);
+
   // Validation
-  validation(Number(noakhaliDonateInput.value), accountBalanceValue);
+  validation(donatedInputValue, accountBalanceValue);
 
   //   Calculate
   const mainAccountBalance = accountBalanceValue - donatedInputValue;
   const donatedMoney = donatedAmountValue + donatedInputValue;
-
   accountBalance.innerText = mainAccountBalance;
   donatedAmount.innerText = donatedMoney;
+  // Create donated  history
   createDonatedHistory(donatedInputValue, "Flood at Noakhali, Bangladesh");
 });
 
-function createDonatedHistory(amount, place) {
+// Event handling for feni donate button
+
+// Event handling for feni donate button
+const donateForFeni = document.getElementById("donate-for-feni");
+donateForFeni.addEventListener("click", function () {
+  // Get the elements
+  const feniDonatedAmount = document.getElementById("feni-donated-amount");
+  const feniDonatedInput = document.getElementById("feni-donated-input");
+
+  //   Convert value into number
+  const accountBalanceValue = Number(accountBalance.innerText);
+  const donatedAmountValue = Number(feniDonatedAmount.innerText);
+  const feniDonatedInputValue = Number(feniDonatedInput.value);
+
   // Validation
-  validation(amount);
-  const div = document.createElement("div");
-  div.className = "border-2 border-gray-500 rounded-sm p-3 my-2";
-  const h2 = document.createElement("h2");
-  h2.className = "text-xl text-center";
-  h2.innerText = `${amount} is donated for ${place}`;
-  const p = document.createElement("p");
-  p.innerText = `${new Date().toLocaleString()}`;
-  div.appendChild(h2);
-  div.appendChild(p);
+  validation(feniDonatedInputValue, accountBalanceValue);
 
-  const history = document.getElementById("history");
-  history.appendChild(div);
-  console.log(history);
-}
-
-function validation(value, mainBalance) {
-  if (isNaN(value) || isNaN(mainBalance) || value === "") {
-    alert("Invalid Donation Amount");
-  }
-}
+  //   Calculate
+  const mainAccountBalance = accountBalanceValue - feniDonatedInputValue;
+  const donatedMoney = donatedAmountValue + feniDonatedInputValue;
+  accountBalance.innerText = mainAccountBalance;
+  feniDonatedAmount.innerText = donatedMoney;
+  // Create donated  history
+  createDonatedHistory(feniDonatedInputValue, "Flood at Feni, Bangladesh");
+});
