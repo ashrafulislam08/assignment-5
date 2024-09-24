@@ -65,7 +65,7 @@
     <!-- Main -->
     <main class="container mx-auto">
       <!-- Dontation Container -->
-      <section>
+      <section id="donate-container">
         <!-- Noakhali -->
         <div class="flex justify-center items-center flex-col lg:flex-row">
           <!-- Card Image -->
@@ -94,7 +94,7 @@
             </p>
             <div>
               <input
-                type="number"
+                type="text"
                 placeholder="Write Donation Amount"
                 class="py-3 px-2 w-full border-2 border-gray-300 my-2"
                 id="noakhali-donated-input"
@@ -192,8 +192,9 @@
         </div>
       </section>
       <!-- History Section -->
-      <section id="history"></section>
+      <section class="hidden" id="history"></section>
     </main>
     <script src="./js/index.js"></script>
+    <script src="./js/handleTab.js"></script>
   </body>
 </html>
