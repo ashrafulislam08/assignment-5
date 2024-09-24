@@ -25,4 +25,17 @@ donateForNoakhali.addEventListener("click", function () {
   if (parseFloat(accountBalance.innerText) < 0) {
     alert("Not enough money");
   }
+  createDonatedHistory(donatedMoney, "Flood at Noakhali, Bangladesh");
 });
+
+function createDonatedHistory(amount, place) {
+  const container = `
+    <div class="border-2 border-gray-500 p-3">
+      <h2 class="text-xl ">${amount} Taka is donated for ${place}</h2>
+      <p>${new Date().toLocaleDateString()}</p>
+    </div>
+  `;
+  const history = document.getElementById("history");
+  history.innerHTML = container;
+  console.log(history);
+}
