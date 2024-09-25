@@ -1,4 +1,4 @@
-// Validation
+// Validation - not used
 function validation(inputValue1, inputValue2) {
   if (inputValue1 == 0) {
     alert("Enter amount");
@@ -28,4 +28,10 @@ function createDonatedHistory(amount, place) {
 
   const history = document.getElementById("history");
   history.appendChild(div);
+}
+
+// Create Modal
+function createModal() {
+  const myModal = document.getElementById("my_modal_2");
+  myModal.showModal();
 }

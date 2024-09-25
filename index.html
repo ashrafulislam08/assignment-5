@@ -23,7 +23,9 @@
     <!-- Header -->
     <header class="sticky top-0 z-10 py-3 backdrop-blur-sm bg-transparent">
       <!-- Navbar -->
-      <nav class="flex my-5 items-center justify-between container mx-auto">
+      <nav
+        class="flex my-5 items-center justify-between container mx-auto bg-orange-100 p-4"
+      >
         <!-- Blog -->
         <div>
           <a
@@ -62,12 +64,26 @@
         </button>
       </section>
     </header>
+
+    <!-- Modal-->
+    <!-- <button class="btn" onclick="">open modal</button> -->
+    <dialog id="my_modal_2" class="modal text-center">
+      <div class="modal-box">
+        <h3 class="text-xl font-bold">Congrats!</h3>
+        <img class="mx-auto py-2" src="./assets/coin.png" alt="" />
+        <p class="py-4">You have donated for Humankind</p>
+        <!-- <button id="close-modal" class="btn">Close Confirmation</button> -->
+        <form method="dialog">
+          <button class="btn">Close Confirmation</button>
+        </form>
+      </div>
+    </dialog>
     <!-- Main -->
     <main class="container mx-auto">
       <!-- Dontation Container -->
       <section id="donate-container">
         <!-- Noakhali -->
-        <div class="flex justify-center items-center flex-col lg:flex-row">
+        <div class="flex justify-center items-center flex-col lg:flex-row my-2">
           <!-- Card Image -->
           <div>
             <img src="./assets/noakhali.png" alt="" />
@@ -112,7 +128,7 @@
         <div class="flex justify-center items-center flex-col lg:flex-row">
           <!-- Card Image -->
           <div>
-            <img src="./assets/noakhali.png" alt="" />
+            <img src="./assets/feni.png" alt="" />
           </div>
           <!-- Card Text -->
           <div class="p-3 lg:w-1/2 lg:pl-5">
@@ -153,17 +169,19 @@
           </div>
         </div>
         <!-- Quota Movement  -->
-        <div class="flex justify-center items-center flex-col lg:flex-row">
+        <div class="flex justify-center items-center flex-col lg:flex-row my-2">
           <!-- Card Image -->
           <div>
-            <img src="./assets/noakhali.png" alt="" />
+            <img src="./assets/quota-protest.png" alt="" />
           </div>
           <!-- Card Text -->
           <div class="p-3 lg:w-1/2 lg:pl-5">
             <!-- Donated Amount -->
             <div class="flex items-center gap-2 mt-3">
               <img src="./assets/coin.png" alt="" />
-              <p class="text-gray-500 text-md text-xl"><span>2400</span> BDT</p>
+              <p class="text-gray-500 text-md text-xl">
+                <span id="quota-donated-amount">2400</span> BDT
+              </p>
             </div>
             <h2 class="font-semibold text-black text-2xl my-3">
               Aid for Injured in the Quota Movement
@@ -181,12 +199,14 @@
             </p>
             <div>
               <input
+                id="quota-donated-input"
                 type="number"
                 placeholder="Write Donation Amount"
                 class="py-3 px-2 w-full border-2 border-gray-300 my-2"
               />
             </div>
             <button
+              id="quota-donated-btn"
               class="font-bold text-xl rounded-md bg-green-300 w-full py-3"
             >
               Donate Now
