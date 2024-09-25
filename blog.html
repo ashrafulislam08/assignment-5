@@ -4,8 +4,81 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <h3>Blog is coming</h3>
+    <section class="space-y-3 p-5">
+      <h2 class="font-bold text-xl">Questions about DOM</h2>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          What is Document Object Model (DOM)?
+        </div>
+        <div class="collapse-content">
+          <p>
+            The Document Object Model is a cross-platform and
+            language-independent interface that treats an HTML or XML document
+            as a tree structure wherein each node is an object representing a
+            part of the document. The DOM represents a document with a logical
+            tree.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          How do you select an element from DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            There are multiple ways to select elements from the DOM (Document
+            Object Model) in JavaScript, including: getElementById: Selects an
+            element by its ID. This is the simplest and fastest way to select a
+            single element. getElementsByClassName: Selects elements by their
+            class name. getElementsByTagName: Selects elements by their tag
+            name. querySelector: Selects the first element that matches a
+            specified CSS selector. querySelectorAll: Selects all elements that
+            match a specified CSS selector.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          What is event delegation in the context of the DOM, and why is it
+          useful?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Event delegation is a technique where you attach a single event
+            listener to a parent element, allowing it to handle events triggered
+            on any of its child elements, effectively "delegating" event
+            handling to a higher level in the DOM tree
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          How do you manipulate an element's attributes and styles using the
+          DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            To manipulate an element's attributes and styles using the DOM in
+            JavaScript, you first need to select the element using methods like
+            getElementById, getElementsByClassName, or querySelector, then
+            access its attributes using setAttribute and getAttribute for
+            attributes, and use the style property to directly modify its CSS
+            styles inline
+          </p>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
