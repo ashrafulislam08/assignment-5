@@ -12,6 +12,36 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
+    <!-- Header -->
+    <header class="sticky top-0 z-10 py-3 backdrop-blur-sm bg-transparent">
+      <!-- Navbar -->
+      <nav
+        class="flex my-5 items-center justify-between container mx-auto bg-orange-100 p-4"
+      >
+        <!-- Blog -->
+        <div>
+          <a
+            class="bg-green-300 rounded-md py-2 px-4 font-semibold"
+            href="blog.html"
+            >Blog</a
+          >
+        </div>
+
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <img class="w-8" src="./assets/logo.png" alt="" />
+          <a href="index.html" class="lg:text-xl text-sm font-semibold"
+            >Donate Bangladesh</a
+          >
+        </div>
+
+        <!-- Account Balance -->
+        <div class="flex items-center gap-2">
+          <img src="./assets/coin.png" alt="" />
+          <h2><span class="mr-1" id="account-balance">5500 </span>BDT</h2>
+        </div>
+      </nav>
+    </header>
     <section class="space-y-3 p-5">
       <h2 class="font-bold text-xl">Questions about DOM</h2>
       <div class="collapse collapse-arrow bg-base-200">
